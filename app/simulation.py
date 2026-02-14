@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from app.models.visitatore import Visitatore
-from app.models.attrazione import Attrazione
+from app.db.models.visitatore import Visitatore
+from app.db.models.attrazione import Attrazione
 
 
 def esegui_ciclo_simulazione(db: Session):
