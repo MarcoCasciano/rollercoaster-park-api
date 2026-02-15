@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String
+from sqlalchemy.orm import relationship
 from app.db.database import Base
 
 class Famiglia(Base):
@@ -9,3 +10,5 @@ class Famiglia(Base):
     num_adulti = Column(Integer, default=1)
     num_bambini = Column(Integer, default=1)
     num_ragazzi = Column(Integer, default=1)
+
+    visitatori = relationship("Visitatore", back_populates="famiglia")

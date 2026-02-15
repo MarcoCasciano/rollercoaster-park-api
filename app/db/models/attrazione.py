@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean, Float
+from sqlalchemy.orm import relationship
 from app.db.database import Base
 
 class Attrazione(Base):
@@ -11,3 +12,5 @@ class Attrazione(Base):
     durata_giro = Column(Integer, default=2)
     posizione_x = Column(Float, default=0.0)
     posizione_y = Column(Float, default=0.0)
+
+    giri = relationship("Giro", back_populates="attrazione")
