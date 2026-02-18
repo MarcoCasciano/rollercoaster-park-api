@@ -1,5 +1,7 @@
 from pydantic import BaseModel, Field
 
+from app.schemas.visitatore import VisitatoreRead
+
 
 class FamigliaBase(BaseModel):
     cognome: str = Field(..., min_length=1, max_length=100)
@@ -21,6 +23,7 @@ class FamigliaUpdate(BaseModel):
 
 class FamigliaRead(FamigliaBase):
     id: int
+    visitatori: list[VisitatoreRead] = []
 
     class Config:
         from_attributes = True

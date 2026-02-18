@@ -2,6 +2,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from app.schemas.giro import GiroRead
+
 
 class VisitatoreBase(BaseModel):
     nome: str = Field(..., min_length=1, max_length=100)
@@ -27,6 +29,7 @@ class VisitatoreUpdate(BaseModel):
 
 class VisitatoreRead(VisitatoreBase):
     id: int
+    giri: list[GiroRead] = []
 
     class Config:
         from_attributes = True
