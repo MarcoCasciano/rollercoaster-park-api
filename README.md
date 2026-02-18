@@ -1,5 +1,7 @@
 # Rollercoaster Park
 
+![Rollercoaster Park](assets/banner.png)
+
 API REST per la gestione di un parco divertimenti, costruita con **FastAPI**, **SQLAlchemy** e **PostgreSQL**.
 
 Il progetto include anche un simulatore standalone (`app/main.py`) che dimostra la logica OOP del parco (attrazioni, famiglie, code e giri).
