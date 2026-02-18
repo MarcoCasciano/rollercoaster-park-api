@@ -1,9 +1,13 @@
 """
-Simulatore di parco divertimenti "ROLLERCOASTER".
+Simulatore standalone di parco divertimenti "ROLLERCOASTER".
 
-Simula il funzionamento di un parco divertimenti con famiglie che fruiscono
-di diverse attrazioni.
-Gestisce code, capienza e movimenti delle giostre.
+Questo modulo è la versione originale del simulatore, autocontenuta e
+indipendente dal database. Le attrazioni e le famiglie vengono generate
+in memoria tramite costanti e funzioni dedicate.
+
+Con l'introduzione dell'API REST e del database PostgreSQL (vedi app/app.py),
+la gestione dei dati è stata spostata sul DB. Questo file viene mantenuto
+come riferimento della logica OOP e del ciclo di simulazione.
 """
 
 import random
