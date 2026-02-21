@@ -9,12 +9,12 @@ Il progetto include anche un simulatore standalone (`app/main.py`) che dimostra 
 ## Requisiti
 
 - Python 3.12
-- Docker (per PostgreSQL)
+- Docker 4.58.1 (per PostgreSQL)
 
 ## Installazione
 
 ```bash
-git clone <url-del-repo>
+git clone https://github.com/MarcoCasciano/rollercoaster-park-api.git
 cd RollercoasterPark-OOP
 
 python -m venv .venv
@@ -31,7 +31,7 @@ Avvia il database PostgreSQL con Docker:
 docker compose -f docker/docker-compose.yml up -d
 ```
 
-Crea un file `.env` nella root del progetto con la stringa di connessione (vedi `.env.example` o il `docker-compose.yml` per i valori).
+Crea un file `.env` nella root del progetto con la stringa di connessione al database (vedi `.env.example` o il `docker-compose.yml` per i valori).
 
 Avvia l'applicazione:
 
